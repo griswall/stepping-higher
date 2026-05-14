@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --charcoal: #171716;
+  --charcoal-soft: #24231f;
+  --linen: #f4efe6;
+  --paper: #fbf8f0;
+  --copper: #a65b2a;
+  --copper-dark: #763817;
+  --sage: #8fa99b;
+  --sage-soft: #d8e1d9;
+  --ink-muted: #68645c;
+  --line: rgba(23, 23, 22, 0.15);
+
+  font-family:
+    "Geist Variable", Geist, Helvetica, Arial, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--charcoal);
+  background: var(--linen);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--copper);
+  color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
