@@ -3,6 +3,8 @@ import './App.css'
 const bookingUrl =
   'https://calendly.com/stepping-higher-coaching/sample-coaching-session-with-anthony-harrison'
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 const focusAreas = [
   {
     label: 'Clarity',
@@ -112,7 +114,7 @@ function App() {
         <div className="hero-portrait-wrap" aria-hidden="true">
           <img
             className="hero-portrait"
-            src="/images/anthony-harrison.jpg"
+            src={assetUrl('images/anthony-harrison.jpg')}
             alt=""
           />
         </div>
@@ -219,7 +221,10 @@ function App() {
 
       <section id="about" className="section about-section">
         <div className="about-image reveal">
-          <img src="/images/anthony-harrison-portrait.jpg" alt="Anthony Harrison smiling" />
+          <img
+            src={assetUrl('images/anthony-harrison-portrait.jpg')}
+            alt="Anthony Harrison smiling"
+          />
         </div>
         <div className="about-copy reveal">
           <p className="eyebrow">About Anthony</p>
