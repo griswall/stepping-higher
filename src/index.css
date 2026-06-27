@@ -1,22 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --charcoal: #171716;
-  --charcoal-soft: #24231f;
-  --linen: #f4efe6;
-  --paper: #fbf8f0;
-  --copper: #a65b2a;
-  --copper-dark: #763817;
-  --sage: #8fa99b;
-  --sage-soft: #d8e1d9;
-  --ink-muted: #68645c;
-  --line: rgba(23, 23, 22, 0.15);
+  --ink: #183238;
+  --ink-soft: #304b52;
+  --mist: #f3f8f6;
+  --paper: #ffffff;
+  --accent: #c56832;
+  --sage: #a7cbb6;
+  --sage-soft: #e2f2e8;
+  --slate-wash: #e7f2f5;
+  --text-muted: #5c7076;
+  --line: rgb(24 50 56 / 0.14);
+  --inverse-bg: #183238;
+  --inverse-text: #ffffff;
+  --button-bg: #183238;
+  --button-text: #ffffff;
+  --button-hover: #304b52;
+  --button-hover-text: #ffffff;
+  --button-light-bg: #ffffff;
+  --button-light-text: #183238;
+  --radius-panel: 18px;
+  --radius-inner: 14px;
+  --shadow-panel:
+    0 14px 38px rgb(38 82 76 / 0.065),
+    0 2px 8px rgb(38 82 76 / 0.035);
+  --shadow-soft:
+    0 8px 22px rgb(38 82 76 / 0.05),
+    0 1px 5px rgb(38 82 76 / 0.025);
+  --content-max: 1600px;
+  --inner-max: 1472px;
+  --layout-gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-space: clamp(4rem, 6vw, 6.5rem);
+  --hero-rail-start: max(
+    var(--layout-gutter),
+    calc((100vw - var(--content-max)) / 2 + var(--layout-gutter))
+  );
 
+  color: var(--ink);
+  background: var(--mist);
+  color-scheme: light;
   font-family:
     "Geist Variable", Geist, Helvetica, Arial, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--charcoal);
-  background: var(--linen);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -53,8 +78,8 @@ img {
 }
 
 ::selection {
-  background: var(--copper);
-  color: var(--paper);
+  background: var(--accent);
+  color: var(--inverse-text);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -65,5 +90,10 @@ img {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
